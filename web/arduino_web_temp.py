@@ -13,7 +13,7 @@ import sys,re, urllib2
 url = "http://192.168.2.40"
 
 def gettemperature(response):
-    return re.findall("Temp(\d):\s(-?\d+.\d)", response)
+    return re.findall("Temp(\d):\s(-?\s*\d+.\d)", response)
 
 if len(sys.argv) == 2 and sys.argv[1] == "autoconf":
 
